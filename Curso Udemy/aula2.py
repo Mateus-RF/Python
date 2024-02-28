@@ -1,14 +1,11 @@
-a = 'AAAAA'
-b = 'BBBBBB'
-c = 1.1
+nome = 'Mateus Ribeiro Ferreira'
+altura = 1.74
+peso = 75
+imc = peso / altura ** 2
 
-# string com parmentro nomeado
-string = 'b={nome2} a={nome1} a={nome1} c={nome3:.2f}'
-formato = string.format( nome1=a, nome2=b, nome3=c )
+"f-strings"
+linha_1 = f'{nome} tem {altura:.2f} de altura,'
+linha_2 = f'\npesa {peso} quilos e seu imc é'
+linha_3 = f'\n{imc:.2f}'
 
-# string sem parametro nomeado
-text = 'a={} b={} c={:.2f}'
-formato_2 = text.format(a, b, c)
-
-print(formato)
-print(formato_2)
+print(linha_1,linha_2,linha_3)

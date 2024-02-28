@@ -1,10 +1,14 @@
-numero_1 = input('Digite um número: ')
-numero_2 = input('Digite outro número: ')
+a = 'AAAAA'
+b = 'BBBBBB'
+c = 1.1
 
+# string com parmentro nomeado
+string = 'b={nome2} a={nome1} a={nome1} c={nome3:.2f}'
+formato = string.format( nome1=a, nome2=b, nome3=c )
 
-int_numero_1 = int(numero_1)
-int_numero_2 = int(numero_2)
+# string sem parametro nomeado
+text = 'a={} b={} c={:.2f}'
+formato_2 = text.format(a, b, c)
 
-print(f'A soma dos números é: {int_numero_1 + int_numero_2}')
-# forma simplificada
-print(f'A soma dos números é: {int(numero_1) + int(numero_2)}')
+print(formato)
+print(formato_2)
