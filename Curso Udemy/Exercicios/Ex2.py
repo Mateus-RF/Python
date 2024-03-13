@@ -1,3 +1,4 @@
+# Exercício de programação - Cálculo do IMC
 nome = 'Mateus Ribeiro'
 altura = 1.74
 peso = 75
