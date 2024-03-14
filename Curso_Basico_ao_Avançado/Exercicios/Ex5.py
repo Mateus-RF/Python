@@ -10,6 +10,7 @@ if numero.isdigit():
     numero_int = int(numero)
 
     resto_divisao = numero_int % 2
+
     if resto_divisao == 0:
         print(f'O numero {numero} é par')
     else:
@@ -22,20 +23,23 @@ Faça um programa que pergunte a hora ao usuário e, baseando-se no horário
 descrito, exiba a saudação apropriada. Ex: 
 Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
 """
+try:
+    hora = input('Digite o Horario atual: ')
+    horario_int = int(hora)
+    horario_dia = horario_int >= 0 and horario_int <= 11
+    horario_tarde = horario_int >= 12 and horario_int <= 17
+    horario_noite = horario_int >= 18 and horario_int <= 23
 
-hora = input('Digite o Horario atual: ')
-horario_int = int(hora)
-horario_dia = horario_int >= 0 and horario_int <= 11
-horario_tarde = horario_int >= 12 and horario_int <= 17
-horario_noite = horario_int >= 18 and horario_int <= 23
-
-if horario_dia:
-    print('bom dia')
-elif horario_tarde:
-    print('boa tarde')
-else:
-    print("Boa Noite")
-
+    if horario_dia:
+        print('bom dia')
+    elif horario_tarde:
+        print('boa tarde')
+    elif horario_noite:
+        print("Boa Noite")
+    else:
+        print('Não conheço este horario')
+except:
+    print('Por favor, digite apenas numeros')
 
 """
 Faça um programa que peça o primeiro nome do usuário. Se o nome tiver 4 letras ou 
@@ -44,12 +48,15 @@ menos escreva "Seu nome é curto"; se tiver entre 5 e 6 letras, escreva
 """
 
 nome = input('Digite seu Nome:')
-nome_curto = len(nome) <= 4
+nome_curto = len(nome) > 1 and len(nome) <= 4
 nome_normal = len(nome) >= 5 and len(nome) <= 6
+nome_grande = len(nome) > 6
 
 if nome_curto:
     print('nome curto')
 elif nome_normal:
     print('Nome Normal')
-else:
+elif nome_grande:
     print('Nome grande')
+else:
+    print('Digite mais uma letra')
