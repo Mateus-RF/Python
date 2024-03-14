@@ -6,7 +6,7 @@ inteiro, informe que não é um número inteiro.
 
 numero = input('Digite um numero inteiro: ')
 
-if numero.isdigit() == True:
+if numero.isdigit():
     numero_int = int(numero)
 
     resto_divisao = numero_int % 2
