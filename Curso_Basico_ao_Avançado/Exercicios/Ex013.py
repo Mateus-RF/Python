@@ -1,7 +1,9 @@
-''' Validador de CPF'''
+''' Gerador de CPF '''
+import random
 
-cpf_enviado = '74682489070'.replace('.', '').replace('-', '')
-nove_digitos = cpf_enviado[:9]
+nove_digitos= ''
+for _ in range(9):
+    nove_digitos += str(random.randint(0, 9))
 
 contador_1 = 0
 soma_1 = 0
@@ -23,8 +25,4 @@ for i in dez_digitos:
     contador_2 += 1
 
 cpf_gerado = f"{nove_digitos}{primeiro_dig}{segundo_dig}"
-
-if cpf_enviado == cpf_gerado:
-    print("CPF Valido")
-else:
-    print('CPF Invalido')
+print(cpf_gerado)
